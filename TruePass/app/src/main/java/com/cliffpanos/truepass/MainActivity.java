@@ -13,6 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import static com.cliffpanos.truepass.R.styleable.FloatingActionButton;
+import static com.cliffpanos.truepass.R.styleable.NavigationView;
+import static com.cliffpanos.truepass.R.styleable.Toolbar;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
