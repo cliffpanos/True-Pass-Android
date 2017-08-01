@@ -8,12 +8,9 @@ import android.view.ViewGroup;
 
 import com.cliffpanos.truepass.R;
 
-/**
- * Guests Fragment
- */
-
 public class GuestsFragment extends Fragment {
 
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.guest_passes_fragment, container, false);

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/guest_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/account_icon"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FF000000"/>
+    <TextView
+        android:id="@+id/guest_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/guest_image"
+        android:layout_toRightOf="@+id/guest_image"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:text="Clifford Panos"/>
+    <TextView
+        android:id="@+id/pass_date_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/guest_name"
+        android:layout_alignStart="@+id/guest_name"
+        android:layout_below="@id/guest_name"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:text="May 13 at 2:30 pm"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_keyboard_arrow_right_black_36dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:alpha=".4"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guest_image"
+        android:layout_marginTop="15dp">
+        <include
+            layout="@layout/horizontal_divider"/>
+    </RelativeLayout>
+</RelativeLayout>
