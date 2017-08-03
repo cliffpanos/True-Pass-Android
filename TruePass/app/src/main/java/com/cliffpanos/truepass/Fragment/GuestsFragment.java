@@ -1,4 +1,4 @@
-package com.cliffpanos.truepass.Fragment;
+package com.cliffpanos.truepass.fragment;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,8 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.cliffpanos.truepass.Adapter.GuestListAdapter;
-import com.cliffpanos.truepass.Object.Guest;
+import com.cliffpanos.truepass.adapter.GuestListAdapter;
+import com.cliffpanos.truepass.object.Guest;
 import com.cliffpanos.truepass.R;
 
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class GuestsFragment extends Fragment {
         guestList = new ArrayList<>();
 
         recyclerView = (RecyclerView) view.findViewById(R.id.guest_passes_recycler_view);
-        guestListAdapter = new GuestListAdapter(guestList);
+        guestListAdapter = new GuestListAdapter(getActivity(), guestList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -54,6 +54,9 @@ public class GuestsFragment extends Fragment {
         guestList.add(rahul);
         guestList.add(cliff);
         guestList.add(jerome);
+        guestList.add(wade);
+        guestList.add(wade);
+        guestList.add(wade);
         guestList.add(wade);
 
         guestListAdapter.notifyDataSetChanged();

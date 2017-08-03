@@ -1,4 +1,4 @@
-package com.cliffpanos.truepass.Object;
+package com.cliffpanos.truepass.object;
 
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;

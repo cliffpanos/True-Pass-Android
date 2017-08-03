@@ -1,21 +1,17 @@
-package com.cliffpanos.truepass.Fragment;
+package com.cliffpanos.truepass.fragment;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ImageSpan;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.cliffpanos.truepass.R;
 
@@ -44,10 +40,13 @@ public class TabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate tab_layout and setup Views
-
         View x = inflater.inflate(R.layout.tab_layout, null);
         tabLayout = (TabLayout) x.findViewById(R.id.tabs);
         viewPager = (ViewPager) x.findViewById(R.id.viewpager);
+
+        // Setup toolbar and title
+        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+        final TextView title = (TextView) toolbar.findViewById(R.id.toolbar_title);
 
         // Set an Adapter for the View Pager
         viewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
@@ -62,18 +61,22 @@ public class TabFragment extends Fragment {
             @Override
             public void onPageSelected(int position) {
                 System.out.println("Position: " + position);
+
                 switch(position) {
                     case 0:
                         System.out.println("Case 0");
                         getActivity().setTitle("Locations");
+                        title.setText(R.string.location_title);
                         break;
                     case 1:
                         System.out.println("Case 1");
                         getActivity().setTitle("Guest Passes");
+                        title.setText(R.string.guest_passes_title);
                         break;
                     case 2:
                         System.out.println("Case 2");
                         getActivity().setTitle("Account");
+                        title.setText(R.string.account_title);
                         break;
                 }
             }

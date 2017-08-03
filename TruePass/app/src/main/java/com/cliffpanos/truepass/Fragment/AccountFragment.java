@@ -1,4 +1,4 @@
-package com.cliffpanos.truepass.Fragment;
+package com.cliffpanos.truepass.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
