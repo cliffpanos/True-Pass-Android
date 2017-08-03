@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="70dp"-->
-        <!--android:background="@color/colorPrimary"-->
-        <!--android:id="@+id/toolbar"/>-->
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar"/>
 
     <FrameLayout
         android:layout_width="match_parent"

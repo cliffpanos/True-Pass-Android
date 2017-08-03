@@ -27,7 +27,7 @@
         android:textColor="#000000"
         android:text="Clifford Panos"/>
     <TextView
-        android:id="@+id/pass_date_created"
+        android:id="@+id/guest_pass_date_created"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/guest_name"
